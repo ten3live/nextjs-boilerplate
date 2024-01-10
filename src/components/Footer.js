@@ -4,18 +4,19 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 import Image from "next/image";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import "@fortawesome/fontawesome-free/css/all.min.css"
-import styles from '../styles/Navbar.module.css';
+
 
 export default function App() {
   return (
+    <div >
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
      
 
       <section className=''>
-        <MDBContainer className='text-center text-md-start mt-5'>
-          <MDBRow className='mt-3'>
+        <MDBContainer className='text-center text-md-start'>
+          <MDBRow className='pt-2'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto '><div className='flex mb-4 text-center  items-center justify-center'><Image className="me-3"  width={60}height={60} src="/topi.png" alt="Tahiri Services"/>
-              <h6 id={styles.title} className='text-uppercase fw-bold'>
+              <h6 className='text-uppercase fw-bold'>
            
                 
                 Tahiri Services
@@ -124,5 +125,6 @@ export default function App() {
         </a>
       </div>
     </MDBFooter>
+    </div>
   );
 }

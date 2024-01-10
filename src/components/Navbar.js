@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 // import Modal from './Modal'
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function App() {
   useEffect(() => {
@@ -24,22 +25,28 @@ export default function App() {
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <Link class="nav-link active" aria-current="page" href="/">Home</Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <Link class="nav-link active" aria-current="page" href="/services">Services</Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Login</a>
+          <Link class="nav-link active" aria-current="page" href="/about">About</Link>
+          </li>
+          <li class="nav-item">
+          <Link class="nav-link active" aria-current="page" href="/contact">Contact</Link>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
             <ul class="dropdown-menu" aria-labelledby="dropdown04">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><Link class="dropdown-item" href="/login">Login</Link></li>
+              <li><Link class="dropdown-item" href="/register">Register</Link></li>
+              <li><Link class="dropdown-item" href="/settings">Settings</Link></li>
+              <li><Link class="dropdown-item" href="/logout">Logout</Link></li>
+   
             </ul>
           </li>
         </ul>

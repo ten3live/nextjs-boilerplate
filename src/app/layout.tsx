@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import '@/src/css/bootstrap.min.css'
 import Navbar from "@/src/components/Navbar"
+import Footer from "@/src/components/Footer"
+import {Providers} from "@/src/Providers";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -15,9 +17,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}><Navbar/>{children}</body>
+  return (<>
+  
+    <html lang="en"><body className={inter.className}><Providers><Navbar/><div>{children}</div>
+    <Footer/></Providers></body>
     </html>
+    
+    </>
   )
 }
