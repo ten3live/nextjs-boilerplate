@@ -9,7 +9,7 @@ import {animals} from "@/components/data";
 
 export default function DocsPage() {
 	const [isClient, setIsClient] = useState(false)
-	const radius = [ "full", "lg", "md", "sm", "none"];
+	const radius = ['full', 'lg', 'md', 'sm', 'none'];
 	const itemClasses = {
 		base: "py-0 w-full",
 		title: "font-normal text-medium",

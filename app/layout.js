@@ -7,7 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import '@/styles/styles.css'
-export const metadata: Metadata = {
+export const metadata = {
 	title: {
 		default: siteConfig.name,
 		template: `%s - ${siteConfig.name}`,
@@ -26,8 +26,6 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: {
-	children: React.ReactNode;
 }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
