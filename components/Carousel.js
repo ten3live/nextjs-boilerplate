@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import styles from '../styles/slider.module.css';
 
 
 const ImageCarousel = ({ style }) => {
@@ -27,19 +27,28 @@ const ImageCarousel = ({ style }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    fade: true,
+    arrows:false,
+    lazyLoad: true,
+    speed: 200,
+    autoplaySpeed: 6000,
+    cssEase: "linear",
+    adaptiveHeight: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    pauseOnHover: false,
+    swipeToSlide: true,
     autoplay: true, // Autoplay is handled separately
     beforeChange: (current, next) => setCurrentIndex(next),
   };
 
   return (
-   <div style={{margin:20,width:'80%',...style,}}>
+   <div className={styles.container} style={{...style,}}>
+    
     <Slider  {...settings}>
       {images.map((image, index) => (
         <div key={index}>
-          <img  style={{width:'100%',height:600,objectFit:'stretch'}} src={image} alt={`Slide ${index + 1}`} />
+          <img className={styles.images} src={image} alt={`Slide ${index + 1}`} />
         </div>
       ))}
     </Slider>

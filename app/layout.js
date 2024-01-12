@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
@@ -19,8 +20,8 @@ export const metadata = {
 	],
 	icons: {
 		icon: "/favicon.ico",
-		shortcut: "/favicon-16x16.png",
-		apple: "/apple-touch-icon.png",
+		shortcut: "/topi.png",
+		apple: "/topi.png",
 	},
 };
 

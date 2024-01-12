@@ -22,9 +22,13 @@ export default function App() {
   const toggleOpen2 = () => setTopRightModal(!topRightModal);
 
   useEffect(() => {
-		setIsClient(true)
+		setIsClient(true),
+    require('mdb-react-ui-kit/dist/css/mdb.min.css')
+
 	  }, [])
-  const toggleOpen = () => setPopoverModal(!popoverModal);
+
+   
+    const toggleOpen = () => setPopoverModal(!popoverModal);
   const onChangeRecipient = (event: ChangeEvent<HTMLInputElement>) => {
     setVaryingRecipient(event.target.value);
   };

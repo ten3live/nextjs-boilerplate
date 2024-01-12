@@ -7,7 +7,9 @@ import ImageCarousel from '@/components/Carousel';
 
 
 export default function Home() {
-	return (<div><section className="flex flex-col items-center justify-center gap-4 py-8 mt-4 md:py-10">
+	return (<div>
+		<div style={{display:'flex',justifyContent:'center',alignItems:'center'}}><ImageCarousel/></div>
+		<section className="flex flex-col items-center justify-center gap-4 py-8 mt-4 md:py-10">
 		
 			<div className="inline-block max-w-lg text-center justify-center">
 				<h1 className={title()}>Welcome to </h1><br/>
@@ -38,7 +40,7 @@ export default function Home() {
 			</div>
 			
 		</section>
-		<div style={{display:'flex',justifyContent:'center',alignItems:'center'}}><ImageCarousel/></div>
+		
 		</div>
 	);
 }
