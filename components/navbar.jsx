@@ -1,3 +1,5 @@
+'use client'
+import { usePathname } from "next/navigation";
 import {
 	Navbar as NextUINavbar,
 	NavbarContent,
@@ -23,8 +25,8 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import Image from "next/image";
 
 export const Navbar = () => {
-	
-
+const pathname=usePathname();	
+// console.log(pathname==='/services')
 	return (
 		<NextUINavbar maxWidth="xl" position="sticky">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -45,7 +47,7 @@ export const Navbar = () => {
 				<NavbarItem className="hidden md:flex">
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
 					{siteConfig.navItems.map((item) => (
-						<NavbarItem key={item.href}>
+						pathname!==item.href&&<NavbarItem key={item.href}>
 							<NextLink
 								className={clsx(
 									linkStyles({ color: "foreground" }),
@@ -79,7 +81,7 @@ export const Navbar = () => {
 					{siteConfig.navItems.map((item, index) => (
 						<NavbarMenuItem key={`${item}-${index}`}>
 							<Link
-								color={"primary"}
+								color={pathname!==item.href?"primary":"secondary"}
 								href={`${item.href}`}
 								size="lg"
 							>

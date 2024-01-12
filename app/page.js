@@ -20,23 +20,25 @@ export default function Home() {
 					Here we provide Quality services to you such as Website Development,Android Apps,Logo Design and SEO
 				</h3>
 			</div>
-		
+			
 			<div className="flex gap-3">
+			<Link
+				
+				className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
+				href="/services"
+			>
+				
+				Services
+			</Link>
 				<Link
-					isExternal
-					href="#"
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href="#"
-				>
 					
-					GitHub
+					href="/contact"
+					className={buttonStyles({ color: "secondary", radius: "full", variant: "shadow" })}
+
+				>
+					Contact Us
 				</Link>
+				
 			</div>
 			
 		</section>

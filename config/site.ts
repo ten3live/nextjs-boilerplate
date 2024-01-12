@@ -9,20 +9,17 @@ export const siteConfig = {
 			href: "/",
 		},
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Services",
+      href: "/services",
     },
     {
-      label: "MDBoot",
-      href: "/mdboot",
+      label: "Contact",
+      href: "/contact",
     },
+   
     {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
+      label: "My Profile",
+      href: "/profile",
     },
     {
       label: "About",
