@@ -1,6 +1,6 @@
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
+import Image from 'next/image'
+import { Card,CardHeader } from "@nextui-org/react"
 import { button as buttonStyles } from "@nextui-org/theme";
 import { title, subtitle } from "@/components/primitives";
 import ImageCarousel from '@/components/Carousel';
@@ -42,7 +42,24 @@ export default function Home() {
 			</div>
 			
 		</section>
-		
+		<section>
+		<Card className="col-span-12 sm:col-span-4 h-[300px]">
+      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+        <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
+        <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
+      </CardHeader>
+      <Image
+	  	width={400}
+		height={400}
+        removeWrapper
+        alt="Card background"
+        className="z-0 w-full h-full object-cover"
+        src="/topi.png"
+      />
+    </Card>
+
+
+		</section>
 		</div>
 	);
 }

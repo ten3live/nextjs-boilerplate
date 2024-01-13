@@ -38,35 +38,26 @@ const pathname=usePathname();
 				</NavbarBrand>
 				
 			</NavbarContent>
-
 			<NavbarContent
 				className="hidden sm:flex basis-1/5 sm:basis-full"
 				justify="end"
-			>
-				
-				<NavbarItem className="hidden md:flex">
+			><NavbarItem className="hidden md:flex">
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
-					{siteConfig.navItems.map((item) => (
-						pathname!==item.href&&<NavbarItem key={item.href}>
-							<NextLink
-								className={clsx(
-									linkStyles({ color: "foreground" }),
-									"data-[active=true]:text-primary data-[active=true]:font-medium"
-								)}
-								color="foreground"
+					{siteConfig.navItems.map((item) => (<><NavbarItem key={item.href}>
+							<Link
+								color={pathname!==item.href?"primary":"success"}
 								href={item.href}
 							>
 								{item.label}
-							</NextLink>
-						</NavbarItem>
+							</Link>
+						</NavbarItem></>
 					))}
 				</ul>
 				</NavbarItem>
 				<NavbarItem className="hidden sm:flex gap-2">
 					
 					<ThemeSwitch />
-				</NavbarItem>
-				
+				</NavbarItem>			
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
