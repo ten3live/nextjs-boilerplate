@@ -4,9 +4,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from '../styles/slider.module.css';
+import Image from 'next/image';
 
-
-const ImageCarousel = ({ style }) => {
+const ImageCarousel = ({ className,style }) => {
   const images = [
     '/1.jpg',
     '/2.jpg',
@@ -25,11 +25,11 @@ const ImageCarousel = ({ style }) => {
   }, [currentIndex, images.length]);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     fade: true,
     arrows:false,
-    lazyLoad: true,
+    lazyLoad: false,
     speed: 200,
     autoplaySpeed: 6000,
     cssEase: "linear",
@@ -43,8 +43,9 @@ const ImageCarousel = ({ style }) => {
   };
 
   return (
-   <div className={styles.container} style={{...style,}}>
     
+   <div className={styles.container}>
+    {!images? <h1>Loading</h1>:<div className={className} style={style}>
     <Slider  {...settings}>
       {images.map((image, index) => (
         <div key={index}>
@@ -52,6 +53,7 @@ const ImageCarousel = ({ style }) => {
         </div>
       ))}
     </Slider>
+    </div>}
     </div>
   );
 };

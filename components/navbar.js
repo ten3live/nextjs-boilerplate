@@ -66,7 +66,7 @@ const pathname=usePathname();
 				justify="end"
 			><NavbarItem className="hidden md:flex">
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
-					{siteConfig.navItems.map((item) => (<div key={item.href}><NavbarItem >
+					{siteConfig.navItems.map((item) => (<div><NavbarItem key={item.href}>
 							<Link
 								color={pathname!==item.href?"primary":"success"}
 								href={item.href}
@@ -92,8 +92,8 @@ const pathname=usePathname();
 			<NavbarMenu>
 				
 				<div className="mx-4 mt-2 flex flex-col gap-2">
-					{siteConfig.navItems.map((item, index) => (<div key={`${item}-${index}`}>
-						<NavbarMenuItem>
+					{siteConfig.navItems.map((item, index) => (
+						<NavbarMenuItem key={`${item}-${index}`}>
 							<Link
 								color={pathname!==item.href?"primary":"secondary"}
 								href={`${item.href}`}
@@ -102,7 +102,6 @@ const pathname=usePathname();
 								{item.label}
 							</Link>
 						</NavbarMenuItem>
-						</div>
 					))}
 				</div>
 			</NavbarMenu>
