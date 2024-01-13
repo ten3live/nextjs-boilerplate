@@ -42,7 +42,7 @@ export default function Home() {
 			</div>
 			
 		</section>
-		<section>
+		<section className="flex items-center justify-evenly">
 		<Card className="col-span-12 sm:col-span-4 h-[300px]">
       <CardHeader className="absolute z-10 top-1 flex-col !items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
@@ -51,7 +51,45 @@ export default function Home() {
       <Image
 	  	width={400}
 		height={400}
-        removeWrapper
+        alt="Card background"
+        className="z-0 w-full h-full object-cover"
+        src="/topi.png"
+      />
+    </Card>
+		<Card className="col-span-12 sm:col-span-4 h-[300px]">
+      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+        <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
+        <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
+      </CardHeader>
+      <Image
+	  	width={400}
+		height={400}
+        alt="Card background"
+        className="z-0 w-full h-full object-cover"
+        src="/topi.png"
+      />
+    </Card>
+		<Card className="col-span-12 sm:col-span-4 h-[300px]">
+      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+        <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
+        <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
+      </CardHeader>
+      <Image
+	  	width={400}
+		height={400}
+        alt="Card background"
+        className="z-0 w-full h-full object-cover"
+        src="/topi.png"
+      />
+    </Card>
+		<Card className="col-span-12 sm:col-span-4 h-[300px]">
+      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+        <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
+        <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
+      </CardHeader>
+      <Image
+	  	width={400}
+		height={400}
         alt="Card background"
         className="z-0 w-full h-full object-cover"
         src="/topi.png"
