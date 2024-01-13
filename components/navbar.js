@@ -66,7 +66,7 @@ const pathname=usePathname();
 				justify="end"
 			><NavbarItem className="hidden md:flex">
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
-					{siteConfig.navItems.map((item) => (<div><NavbarItem key={item.href}>
+					{siteConfig.navItems.map((item) => (<div key={item.href}><NavbarItem >
 							<Link
 								color={pathname!==item.href?"primary":"success"}
 								href={item.href}
