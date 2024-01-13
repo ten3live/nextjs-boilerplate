@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const Footer = () => {
 	const currentYear = new Date().getFullYear();
-return (<div class="flex items-end w-full min-h-screen">
+return (<div class="flex items-end w-full min-h-screen text-white">
 
     <footer class="w-full text-white-700 bg-violet-950 body-font">
         <div
@@ -104,7 +104,7 @@ return (<div class="flex items-end w-full min-h-screen">
                             <a class="text-white-500 cursor-pointer hover:text-white-900">ten3live@gmail.com</a>
                         </li>
                         <li class="mt-3">
-                            <a class="text-white-500 cursor-pointer hover:text-white-900">+923058452372</a>
+                            <a class="text-white-500 cursor-pointer hover:text-white-900">+92 305 8452372</a>
                         </li>
                     </nav>
                 </div>
